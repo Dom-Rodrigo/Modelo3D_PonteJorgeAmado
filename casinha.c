@@ -57,6 +57,90 @@ void desenha_paralelepipedo(float Cx, float Cy, float Cz, float L, float h, int 
     glVertex3f(Cx-half_L, Cy-h, Cz+(-half_L)); // BZ
     glEnd();
 }
+
+void arco_ponte(int h, int r, int g, int b){
+    // Arco feito com vários triângulos
+    glBegin(GL_TRIANGLES);
+    glColor3ub(r, g, b);
+    glVertex3f(-2.5f, 0.0f, 0.0f+h); // H
+    glVertex3f(-1.68f, -0.7f, 0.0f+h);
+    glVertex3f(-2.5f, -0.99f, 0.0f+h); 
+    glEnd();
+    glBegin(GL_TRIANGLES);
+    glColor3ub(r, g, b);
+    glVertex3f(-2.5f, 0.0f, 0.0f+h); // H
+    glVertex3f(-1.0f, 0.0f, 0.0f+h);
+    glVertex3f(-1.68f, -0.7f, 0.0f+h);
+    glEnd();
+    glBegin(GL_TRIANGLES);
+    glColor3ub(r, g, b);
+    glVertex3f(-1.0f, 0.0f, 0.0f+h);
+    glVertex3f(-1.68f, -0.7f, 0.0f+h);
+    glVertex3f(-0.86f, -0.53f, 0.0f+h);
+    glEnd();
+    glBegin(GL_TRIANGLES);
+    glColor3ub(r, g, b);
+    glVertex3f(-1.0f, 0.0f, 0.0f+h);
+    glVertex3f(-0.86f, -0.53f, 0.0f+h);
+    glVertex3f(0.0, 0.0f, 0.0f+h); // J
+    glEnd();
+    glBegin(GL_TRIANGLES);
+    glColor3ub(r, g, b);
+    glVertex3f(-1.0f, 0.0f, 0.0f+h);
+    glVertex3f(-0.86f, -0.53f, 0.0f+h); // 0
+    glVertex3f(0.0, 0.0f, 0.0f+h); // J
+    glEnd();
+    glBegin(GL_TRIANGLES);
+    glColor3ub(r, g, b);
+    glVertex3f(0.0, 0.0f, 0.0f+h); // J
+    glVertex3f(-0.86f, -0.53f, 0.0f+h); // 0
+    glVertex3f(-0.27f, -0.46f, 0.0f+h); // I
+    glEnd();
+    glBegin(GL_TRIANGLES);
+    glColor3ub(r, g, b);
+    glVertex3f(0.0, 0.0f, 0.0f+h); // J
+    glVertex3f(-0.27f, -0.46f, 0.0f+h); // I
+    glVertex3f(1.0f, 0.0f, 0.0f+h); // M
+    glEnd();
+    glBegin(GL_TRIANGLES);
+    glColor3ub(r, g, b);
+    glVertex3f(1.0f, 0.0f, 0.0f+h); // M
+    glVertex3f(-0.27f, -0.46f, 0.0f+h); // I
+    glVertex3f(0.44f, -0.48f, 0.0f+h); // K
+    glEnd();
+    glBegin(GL_TRIANGLES);
+    glColor3ub(r, g, b);
+    glVertex3f(1.0f, 0.0f, 0.0f+h); // M
+    glVertex3f(0.44f, -0.48f, 0.0f+h); // K
+    glVertex3f(-1.2f, -0.56f, 0.0f+h); // P
+    glEnd();
+    glBegin(GL_TRIANGLES);
+    glColor3ub(r, g, b);
+    glVertex3f(1.0f, 0.0f, 0.0f+h); // M
+    glVertex3f(-1.2f, -0.56f, 0.0f+h); // P
+    glVertex3f(1.99f, -0.82f, 0.0f+h); // Q
+    glEnd();
+    glBegin(GL_TRIANGLES);
+    glColor3ub(r, g, b);
+    glVertex3f(1.0f, 0.0f, 0.0f+h); // M
+    glVertex3f(2.5f, 0.0f, 0.0f+h); // G
+    glVertex3f(1.99f, -0.82f, 0.0f+h); // Q
+    glEnd();
+    glBegin(GL_TRIANGLES);
+    glColor3ub(r, g, b);
+    glVertex3f(2.5f, 0.0f, 0.0f+h); // G-
+    glVertex3f(1.99f, -0.82f, 0.0f+h); // Q
+    glVertex3f(2.5f, -1.0f, 0.0f+h); // N
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(r, g, b);
+    glVertex3f(-2.5f, 0.0f, 0.0f); // H
+    glVertex3f(2.5f, 0.0f, 0.0f); // G
+    glVertex3f(2.5f, 0.0f, 0.0f+h); // GZ
+    glVertex3f(-2.5f, 0.0f, 0.0f+h); // HZ
+    glEnd();
+
+}
 void Casinha(void) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
    // glClear(GL_COLOR_BUFFER_BIT);
@@ -266,8 +350,9 @@ glBegin(GL_POLYGON);
   desenha_paralelepipedo(3, -2, 0.5, 2, 0.5, 155, 155, 143);
   desenha_paralelepipedo(-3, -2, 0.5, 2, 0.5, 155, 155, 143);
   desenha_paralelepipedo(3, -2.5, 0.5, 3, 0.5, 104, 104, 97);
-  desenha_paralelepipedo(-3, -2.5, 0.5, 3, 0.5, 104, 104, 97);
-
+  desenha_paralelepipedo(-3, -2.5, 0.5, 3, 0.5, 104, 104, 97); // Bases das pernas da ponte
+  arco_ponte(0, 201, 201, 184);
+  arco_ponte(1, 201, 201, 184);
   glFlush();
 }
 
