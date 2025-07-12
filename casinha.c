@@ -106,8 +106,8 @@ glBegin(GL_POLYGON);
     glBegin(GL_POLYGON);
     glColor3f(0.9098f, 0.9098f, 0.7922f); //Base direita XZ TOP
     glVertex3f(3.5f, 0.0f, 0.0f); // J
-    glVertex3f(3.5f, 0.0f, 1.0f); // V
-    glVertex3f(2.5f, 0.0f, 1.0f); // U
+    glVertex3f(3.5f, 0.0f, 1.0f); // JZ
+    glVertex3f(2.5f, 0.0f, 1.0f); // GZ
     glVertex3f(2.5f, 0.0f, 0.0f); // G
   glEnd();
   glBegin(GL_POLYGON);
@@ -141,38 +141,66 @@ glBegin(GL_POLYGON);
   glEnd();
   glBegin(GL_POLYGON);
     glColor3f(0.9098f, 0.9098f, 0.7922f); //Cor de concreto, Trapezio pras pernas
-    glVertex3f(-0.8f, 8.5f,1.0f); // C
-    glVertex3f(0.8f, 8.5f, 1.0f); // D
-    glVertex3f(0.3f, 7.5f, 1.0f); // F
-    glVertex3f(-0.3f, 7.5f,1.0f); // E
+    glVertex3f(-0.8f, 8.5f,1.0f); // CZ
+    glVertex3f(0.8f, 8.5f, 1.0f); // DZ
+    glVertex3f(0.3f, 7.5f, 1.0f); // FZ
+    glVertex3f(-0.3f, 7.5f,1.0f); // EZ
   glEnd();
 glBegin(GL_POLYGON);
     glColor3f(0.9098f, 0.9098, 0.7922f); //Perna esquerda
-    glVertex3f(-0.8f, 8.5f,1.0f); // C
-    glVertex3f(-0.3f, 7.5f,1.0f); // E
-    glVertex3f(-2.5f, 0.0f,1.0f); // H
-    glVertex3f(-3.5f, 0.0f,1.0f); // I1
+    glVertex3f(-0.8f, 8.5f,1.0f); // CZ
+    glVertex3f(-0.3f, 7.5f,1.0f); // EZ
+    glVertex3f(-2.5f, 0.0f,1.0f); // HZ
+    glVertex3f(-3.5f, 0.0f,1.0f); // I1Z
   glEnd();
   glBegin(GL_POLYGON);
     glColor3f(0.9098f, 0.9098, 0.7922f); //Perna direita
-    glVertex3f(0.8f, 8.5f, 1.0f); // D
-    glVertex3f(0.3f, 7.5f, 1.0f); // F
-    glVertex3f(2.5f, 0.0f, 1.0f); // G
-    glVertex3f(3.5f, 0.0f, 1.0f); // J
+    glVertex3f(0.8f, 8.5f, 1.0f); // DZ
+    glVertex3f(0.3f, 7.5f, 1.0f); // FZ
+    glVertex3f(2.5f, 0.0f, 1.0f); // GZ
+    glVertex3f(3.5f, 0.0f, 1.0f); // JZ
   glEnd();
   glBegin(GL_POLYGON);
     glColor3f(0.9098f, 0.9098, 0.7922f); //Base direita
-    glVertex3f(3.5f, 0.0f, 1.0f); // J
-    glVertex3f(3.5f, -2.0f,1.0f); // R1
-    glVertex3f(2.5f, -2.0f,1.0f); // L1
-    glVertex3f(2.5f, 0.0f, 1.0f); // G
+    glVertex3f(3.5f, 0.0f, 1.0f); // JZ
+    glVertex3f(3.5f, -2.0f,1.0f); // R1Z
+    glVertex3f(2.5f, -2.0f,1.0f); // L1Z
+    glVertex3f(2.5f, 0.0f, 1.0f); // GZ
   glEnd();
   glBegin(GL_POLYGON);
     glColor3f(0.9098f, 0.9098, 0.7922f); //Base esquerda
-    glVertex3f(-2.5f, 0.0f,1.0f); // H
-    glVertex3f(-2.5f, -2.0, 1.0f); // R
-    glVertex3f(-3.5f, -2.0, 1.0f); // L
-    glVertex3f(-3.5f, 0.0f,1.0f); // I1
+    glVertex3f(-2.5f, 0.0f,1.0f); // HZ
+    glVertex3f(-2.5f, -2.0, 1.0f); // RZ
+    glVertex3f(-3.5f, -2.0, 1.0f); // LZ
+    glVertex3f(-3.5f, 0.0f,1.0f); // I1Z
+  glEnd();
+    glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098, 0.7922f); //Parede direita da torre
+    glVertex3f(3.5f, 0.0f, 1.0f); // JZ
+    glVertex3f(3.5f, 0.0f, 0.0f); // J
+    glVertex3f(0.8f, 8.5f, 0.0f); // D
+    glVertex3f(0.8f, 8.5f, 1.0f); // DZ
+  glEnd();
+glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098, 0.7922f); //Parede esquerda da torre
+    glVertex3f(-3.5f, 0.0f, 0.0f); // I1
+    glVertex3f(-0.8f, 8.5f, 0.0f); // C
+    glVertex3f(-0.8f, 8.5f, 1.0f); // CZ
+    glVertex3f(-3.5f, 0.0f, 1.0f); // I1Z
+  glEnd();
+    glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098, 0.7922f); //Base direita Z
+    glVertex3f(3.5f, 0.0f, 1.0f); // JZ
+    glVertex3f(3.5f, -2.0f,1.0f); // R1Z
+    glVertex3f(2.5f, -2.0f,0.0f); // R
+    glVertex3f(2.5f, 0.0f, 0.0f); // J
+  glEnd();
+  glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098, 0.7922f); //Base esquerda Z
+    glVertex3f(-2.5f, 0.0f,1.0f); // HZ
+    glVertex3f(-2.5f, -2.0, 1.0f); // RZ
+    glVertex3f(-3.5f, -2.0, 0.0f); // R
+    glVertex3f(-2.5f, 0.0f, 0.0f); // H
   glEnd();
   glFlush();
 }
@@ -180,10 +208,10 @@ glBegin(GL_POLYGON);
 void Iniciar() {
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    gluLookAt(a[0], a[1], a[2], 0.0, 0.0, 0.0, 0.0, 2.0, 0.0);
+    gluLookAt(a[0], a[1], a[2], 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(100.0,largura/altura,1.0,20.0);
+    gluPerspective(100.0,largura/altura,2.0,50.0);
 }
 
 void Teclado(unsigned char key, int x, int y) {
@@ -191,11 +219,16 @@ void Teclado(unsigned char key, int x, int y) {
       case 27:
          exit(0);
          break;
-        case 'a': a[0]=a[0]-0.2;
-        case 'w': a[1]=a[1]-0.2;
-        case 'd': a[2]=a[2]+0.2;
-      break;
-   }
+        case 'a': 
+            a[0]=a[0]-0.2;
+            break;
+        case 'w': 
+            a[1]=a[1]-0.2;
+            break;
+        case 'd': 
+            a[2]=a[2]+0.2;
+            break;
+  }
    glutPostRedisplay();
 }
 
