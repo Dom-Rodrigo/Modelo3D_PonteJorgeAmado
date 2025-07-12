@@ -333,6 +333,60 @@ glBegin(GL_POLYGON);
         glVertex3f(0.0f, -(pow(i, 2)/1000), i);
     }
   glEnd();
+
+  glBegin(GL_LINE_STRIP);
+    glColor3ub(255, 255, 255); // Traço pista
+    for (float i =-100; i < 100; i++){
+        glVertex3f(-3.5f, -(pow(i, 2)/1000), i);
+    }
+  glEnd();
+
+  glBegin(GL_LINE_STRIP);
+    glColor3ub(255, 255, 255); // Traço pista
+    for (float i =-100; i < 100; i++){
+        glVertex3f(3.5f, -(pow(i, 2)/1000), i);
+    }
+  glEnd();
+
+    glBegin(GL_LINE_STRIP);
+    glColor3ub(255, 255, 255); // Traço pista
+    for (float i =-100; i < 100; i++){
+        glVertex3f(-3.5f, -(pow(i, 2)/1000)+0.5, i);
+    }
+  glEnd();
+
+  glBegin(GL_LINE_STRIP);
+    glColor3ub(255, 255, 255); // Traço pista
+    for (float i =-100; i < 100; i++){
+        glVertex3f(3.5f, -(pow(i, 2)/1000)+0.5, i);
+    }
+  glEnd();
+
+
+
+  glBegin(GL_TRIANGLE_STRIP_ADJACENCY);
+    glColor3ub(227, 225, 98); // Traço pista
+    for (float i =-100; i < 100; i++){
+        glVertex3f(3.5f, -(pow(i, 2)/1000)+0.5, i);
+        glVertex3f(3.5f, -(pow(i, 2)/1000), i);
+        glVertex3f(3.5f, -(pow(i+1, 2)/1000)+0.5, i+1);
+
+
+    }
+  glEnd();
+
+    glBegin(GL_TRIANGLE_STRIP_ADJACENCY);
+    glColor3ub(227, 225, 98); // Traço pista
+    for (float i =-100; i < 100; i++){
+        glVertex3f(-3.5f, -(pow(i, 2)/1000)+0.5, i);
+        glVertex3f(-3.5f, -(pow(i, 2)/1000), i);
+        glVertex3f(-3.5f, -(pow(i+1, 2)/1000)+0.5, i+1);
+
+
+    }
+  glEnd();
+
+
   glBegin(GL_LINES);
     glColor3ub(255, 255, 255); // Cabos de aço direita
     for (float i =0; i < 23; i++){ // 23 linhas
