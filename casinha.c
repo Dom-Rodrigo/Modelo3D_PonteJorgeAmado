@@ -80,7 +80,7 @@ glBegin(GL_POLYGON);
     glVertex3f(-0.8f, 8.5f, 0.0f); // C
     glVertex3f(-0.3f, 7.5f, 0.0f); // E
     glVertex3f(-2.5f, 0.0f, 0.0f); // H
-    glVertex3f(-3.5f, 0.0f, 0.0f); // I
+    glVertex3f(-3.5f, 0.0f, 0.0f); // I1
   glEnd();
   glBegin(GL_POLYGON);
     glColor3f(0.9098f, 0.9098f, 0.7922f); //Perna direita
@@ -88,6 +88,91 @@ glBegin(GL_POLYGON);
     glVertex3f(0.3f, 7.5f, 0.0f); // F
     glVertex3f(2.5f, 0.0f, 0.0f); // G
     glVertex3f(3.5f, 0.0f, 0.0f); // J
+  glEnd();
+  glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098f, 0.7922f); //Base direita
+    glVertex3f(3.5f, 0.0f, 0.0f); // J
+    glVertex3f(3.5f, -2.0f, 0.0f); // R1
+    glVertex3f(2.5f, -2.0f, 0.0f); // L1
+    glVertex3f(2.5f, 0.0f, 0.0f); // G
+  glEnd();
+  glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098f, 0.7922f); //Base esquerda
+    glVertex3f(-2.5f, 0.0f, 0.0f); // H
+    glVertex3f(-2.5f, -2.0f, 0.0f); // R
+    glVertex3f(-3.5f, -2.0f, 0.0f); // L
+    glVertex3f(-3.5f, 0.0f, 0.0f); // I1
+  glEnd();
+    glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098f, 0.7922f); //Base direita XZ TOP
+    glVertex3f(3.5f, 0.0f, 0.0f); // J
+    glVertex3f(3.5f, 0.0f, 1.0f); // V
+    glVertex3f(2.5f, 0.0f, 1.0f); // U
+    glVertex3f(2.5f, 0.0f, 0.0f); // G
+  glEnd();
+  glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098f, 0.7922f); //Base esquerda XZ TOP
+    glVertex3f(-2.5f, 0.0f, 0.0f); // H
+    glVertex3f(-2.5f, 0.0f, 1.0f); // HZ
+    glVertex3f(-3.5f, 0.0f, 1.0f); // I1Z
+    glVertex3f(-3.5f, 0.0f, 0.0f); // I1
+  glEnd();
+  glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098f, 0.7922f); //Base direita XZ BOT
+    glVertex3f(3.5f, -2.0f, 0.0f); // R1
+    glVertex3f(2.5f, -2.0f, 0.0f); // L1
+    glVertex3f(2.5f, -2.0f, 1.0f); // L1Z
+    glVertex3f(3.5f, -2.0f, 1.0f); // R1Z
+  glEnd();
+  glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098f, 0.7922f); //Base esquerda XZ BOT
+    glVertex3f(-2.5f, -2.0f, 0.0f); // R
+    glVertex3f(-3.5f, -2.0f, 0.0f); // L
+    glVertex3f(-3.5f, -2.0f, 1.0f); // LZ
+    glVertex3f(-2.5f, -2.0f, 1.0f); // RZ
+  glEnd();
+    glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098f, 0.7922f); //Cor de concreto, Torre de cima
+    glVertex3f(-0.5f, 16.0f, 1.0f);
+    glVertex3f(0.5f, 16.0f,1.0f);
+    glVertex3f(0.8f, 8.5f, 1.0f);
+    glVertex3f(-0.8f, 8.5f,1.0f);
+
+  glEnd();
+  glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098f, 0.7922f); //Cor de concreto, Trapezio pras pernas
+    glVertex3f(-0.8f, 8.5f,1.0f); // C
+    glVertex3f(0.8f, 8.5f, 1.0f); // D
+    glVertex3f(0.3f, 7.5f, 1.0f); // F
+    glVertex3f(-0.3f, 7.5f,1.0f); // E
+  glEnd();
+glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098, 0.7922f); //Perna esquerda
+    glVertex3f(-0.8f, 8.5f,1.0f); // C
+    glVertex3f(-0.3f, 7.5f,1.0f); // E
+    glVertex3f(-2.5f, 0.0f,1.0f); // H
+    glVertex3f(-3.5f, 0.0f,1.0f); // I1
+  glEnd();
+  glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098, 0.7922f); //Perna direita
+    glVertex3f(0.8f, 8.5f, 1.0f); // D
+    glVertex3f(0.3f, 7.5f, 1.0f); // F
+    glVertex3f(2.5f, 0.0f, 1.0f); // G
+    glVertex3f(3.5f, 0.0f, 1.0f); // J
+  glEnd();
+  glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098, 0.7922f); //Base direita
+    glVertex3f(3.5f, 0.0f, 1.0f); // J
+    glVertex3f(3.5f, -2.0f,1.0f); // R1
+    glVertex3f(2.5f, -2.0f,1.0f); // L1
+    glVertex3f(2.5f, 0.0f, 1.0f); // G
+  glEnd();
+  glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098, 0.7922f); //Base esquerda
+    glVertex3f(-2.5f, 0.0f,1.0f); // H
+    glVertex3f(-2.5f, -2.0, 1.0f); // R
+    glVertex3f(-3.5f, -2.0, 1.0f); // L
+    glVertex3f(-3.5f, 0.0f,1.0f); // I1
   glEnd();
   glFlush();
 }
