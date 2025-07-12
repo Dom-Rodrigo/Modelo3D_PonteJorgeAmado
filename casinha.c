@@ -22,45 +22,6 @@ void Casinha(void) {
     glVertex3f(0.0f,0.0f,0.0f);
     glVertex3f(0.0f,0.0f,0.7f); // z verde
   glEnd();
-  glBegin( GL_POLYGON ); //Parede de trás
-    glColor3f(0.6f,0.0f,0.0f); //Vermelha
-    glVertex3f(0.0f,0.0f,0.0f);
-    glVertex3f(0.0f,0.2f,0.0f);
-    glVertex3f(0.2f,0.3f,0.0f);
-    glVertex3f(0.4f,0.2f,0.0f);
-    glVertex3f(0.4f,0.0f,0.0f);
-  glEnd();
-  glBegin( GL_QUADS ); //Parede esquerda
-    glColor3f(0.0f,0.0f,0.6f); //Azul
-    glVertex3f(0.0f,0.0f,0.0f);
-    glVertex3f(0.0f,0.0f,0.4f);
-    glVertex3f(0.0f,0.2f,0.4f);
-    glVertex3f(0.0f,0.2f,0.0f);
-  glEnd();
-  glBegin( GL_QUAD_STRIP ); //Telhado
-    glColor3f(0.0f,0.6f,0.0f); //Verde
-    glVertex3f(0.0f,0.2f,0.0f);
-    glVertex3f(0.0f,0.2f,0.4f);
-    glVertex3f(0.2f,0.3f,0.0f);
-    glVertex3f(0.2f,0.3f,0.4f);
-    glVertex3f(0.4f,0.2f,0.0f);
-    glVertex3f(0.4f,0.2f,0.4f);
-  glEnd();
-  glBegin( GL_POLYGON ); //Parede Frente
-    glColor3f(0.6f,0.6f,0.6f); //Cinza
-    glVertex3f(0.0f,0.0f,0.4f);
-    glVertex3f(0.4f,0.0f,0.4f);
-    glVertex3f(0.4f,0.2f,0.4f);
-    glVertex3f(0.2f,0.3f,0.4f);
-    glVertex3f(0.0f,0.2f,0.4f);
-  glEnd();
-  glBegin( GL_POLYGON ); //Parede Direita
-    glColor3f(0.8f,0.8f,0.0f); //Amarelo
-    glVertex3f(0.4f,0.0f,0.0f);
-    glVertex3f(0.4f,0.0f,0.4f);
-    glVertex3f(0.4f,0.2f,0.4f);
-    glVertex3f(0.4f,0.2f,0.0f);
-  glEnd();
   glBegin(GL_POLYGON);
     glColor3f(0.9098f, 0.9098f, 0.7922f); //Cor de concreto, Torre de cima
     glVertex3f(-0.5f, 16.0f, 0.0f); // A
