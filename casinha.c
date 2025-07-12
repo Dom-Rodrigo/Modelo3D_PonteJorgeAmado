@@ -418,7 +418,7 @@ glBegin(GL_POLYGON);
   glBegin(GL_LINES);
     glColor3ub(0, 0, 0); // Cabos de aço direita
     for (float i =0; i < 23; i++){ // 23 linhas
-        glVertex3f(0.0f, (8.5 + (i/23 * 6.5)), 0);
+        glVertex3f(0.0f, (8.5 + (i/23 * 6.5)), 1);
         glVertex3f(0.0f, -(pow(i, 2)/1000), 32*(i/23));
     }
   glEnd();
