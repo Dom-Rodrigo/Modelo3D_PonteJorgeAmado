@@ -60,6 +60,35 @@ void Casinha(void) {
     glVertex3f(0.4f,0.2f,0.4f);
     glVertex3f(0.4f,0.2f,0.0f);
   glEnd();
+  glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098f, 0.7922f); //Cor de concreto, Torre de cima
+    glVertex3f(-0.5f, 16.0f, 0.0f);
+    glVertex3f(0.5f, 16.0f, 0.0f);
+    glVertex3f(0.8f, 8.5f, 0.0f);
+    glVertex3f(-0.8f, 8.5f, 0.0f);
+
+  glEnd();
+  glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098f, 0.7922f); //Cor de concreto, Trapezio pras pernas
+    glVertex3f(-0.8f, 8.5f, 0.0f); // C
+    glVertex3f(0.8f, 8.5f, 0.0f); // D
+    glVertex3f(0.3f, 7.5f, 0.0f); // F
+    glVertex3f(-0.3f, 7.5f, 0.0f); // E
+  glEnd();
+glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098f, 0.7922f); //Perna esquerda
+    glVertex3f(-0.8f, 8.5f, 0.0f); // C
+    glVertex3f(-0.3f, 7.5f, 0.0f); // E
+    glVertex3f(-2.5f, 0.0f, 0.0f); // H
+    glVertex3f(-3.5f, 0.0f, 0.0f); // I
+  glEnd();
+  glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098f, 0.7922f); //Perna direita
+    glVertex3f(0.8f, 8.5f, 0.0f); // D
+    glVertex3f(0.3f, 7.5f, 0.0f); // F
+    glVertex3f(2.5f, 0.0f, 0.0f); // G
+    glVertex3f(3.5f, 0.0f, 0.0f); // J
+  glEnd();
   glFlush();
 }
 
@@ -69,7 +98,7 @@ void Iniciar() {
     gluLookAt(a[0], a[1], a[2], 0.0, 0.0, 0.0, 0.0, 2.0, 0.0);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(10.0,largura/altura,1.0,20.0);
+    gluPerspective(100.0,largura/altura,1.0,20.0);
 }
 
 void Teclado(unsigned char key, int x, int y) {
