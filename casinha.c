@@ -386,6 +386,34 @@ glBegin(GL_POLYGON);
     }
   glEnd();
 
+      glBegin(GL_TRIANGLES);
+    glColor3ub(28, 28, 23); // Traço pista
+    for (float i =-100; i < 100; i++){
+        glVertex3f(-3.5f, -(pow(i, 2)/1000), i);
+        glVertex3f(+3.5f, -(pow(i, 2)/1000), i);
+        glVertex3f(-3.5f, -(pow(i+1, 2)/1000), i+1);
+    }
+  glEnd();
+
+        glBegin(GL_TRIANGLES);
+    glColor3ub(28, 28, 23); // Traço pista
+    for (float i =-100; i < 100; i++){
+        glVertex3f(+3.5f, -(pow(i-1, 2)/1000), i-1);
+        glVertex3f(-3.5f, -(pow(i-1, 2)/1000), i-1);
+        glVertex3f(-3.5f, -(pow(i+1, 2)/1000), i+1);
+    }
+  glEnd();
+
+    glBegin(GL_TRIANGLES);
+    glColor3ub(28, 28, 23); // Traço pista
+    for (float i =-100; i < 100; i++){
+        glVertex3f(+3.5f, -(pow(i-1, 2)/1000), i-1);
+        glVertex3f(-3.5f, -(pow(i-1, 2)/1000), i-1);
+        glVertex3f(+3.5f, -(pow(i+1, 2)/1000), i+1);
+    }
+  glEnd();
+
+
 
   glBegin(GL_LINES);
     glColor3ub(255, 255, 255); // Cabos de aço direita
@@ -407,6 +435,14 @@ glBegin(GL_POLYGON);
   desenha_paralelepipedo(-3, -2.5, 0.5, 3, 0.5, 104, 104, 97); // Bases das pernas da ponte
   arco_ponte(0, 201, 201, 184);
   arco_ponte(1, 201, 201, 184);
+
+glBegin(GL_POLYGON);
+    glColor3ub(0, 25, 255); // MAR
+    glVertex3f(-100.0f, -3.5f, 100.0f); // E
+    glVertex3f(-100.0f, -3.5f, -100.0f); // F
+    glVertex3f(100.0f, -3.5f, -100.0f); // FZ
+    glVertex3f(100.0f, -3.5f, 100.0f); // EZ
+  glEnd();
   glFlush();
 }
 
