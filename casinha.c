@@ -62,10 +62,10 @@ void Casinha(void) {
   glEnd();
   glBegin(GL_POLYGON);
     glColor3f(0.9098f, 0.9098f, 0.7922f); //Cor de concreto, Torre de cima
-    glVertex3f(-0.5f, 16.0f, 0.0f);
-    glVertex3f(0.5f, 16.0f, 0.0f);
-    glVertex3f(0.8f, 8.5f, 0.0f);
-    glVertex3f(-0.8f, 8.5f, 0.0f);
+    glVertex3f(-0.5f, 16.0f, 0.0f); // A
+    glVertex3f(0.5f, 16.0f, 0.0f); // B
+    glVertex3f(0.8f, 8.5f, 0.0f); // D
+    glVertex3f(-0.8f, 8.5f, 0.0f); // C
 
   glEnd();
   glBegin(GL_POLYGON);
@@ -133,10 +133,10 @@ glBegin(GL_POLYGON);
   glEnd();
     glBegin(GL_POLYGON);
     glColor3f(0.9098f, 0.9098f, 0.7922f); //Cor de concreto, Torre de cima
-    glVertex3f(-0.5f, 16.0f, 1.0f);
-    glVertex3f(0.5f, 16.0f,1.0f);
-    glVertex3f(0.8f, 8.5f, 1.0f);
-    glVertex3f(-0.8f, 8.5f,1.0f);
+    glVertex3f(-0.5f, 16.0f, 1.0f); // AZ
+    glVertex3f(0.5f, 16.0f,1.0f); // BZ
+    glVertex3f(0.8f, 8.5f, 1.0f); // DZ
+    glVertex3f(-0.8f, 8.5f,1.0f); // CZ
 
   glEnd();
   glBegin(GL_POLYGON);
@@ -201,6 +201,34 @@ glBegin(GL_POLYGON);
     glVertex3f(-2.5f, -2.0, 1.0f); // RZ
     glVertex3f(-3.5f, -2.0, 0.0f); // R
     glVertex3f(-2.5f, 0.0f, 0.0f); // H
+  glEnd();
+  glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098f, 0.7922f); // Topo
+    glVertex3f(-0.5f, 16.0f, 0.0f); // A
+    glVertex3f(0.5f, 16.0f, 0.0f); // B
+    glVertex3f(0.5f, 16.0f, 1.0f); // BZ
+    glVertex3f(-0.5f, 16.0f, 1.0f); // AZ
+  glEnd();
+    glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098f, 0.7922f); // Torre parede do lado
+    glVertex3f(0.5f, 16.0f, 0.0f); // B
+    glVertex3f(0.8f, 8.5f, 0.0f); // D
+    glVertex3f(0.8f, 8.5f, 1.0f); // DZ
+    glVertex3f(0.5f, 16.0f, 1.0f); // BZ
+  glEnd();
+  glBegin(GL_POLYGON);
+    glColor3f(0.9098f, 0.9098f, 0.7922f); // Torre parede do outro lado
+    glVertex3f(-0.5f, 16.0f, 0.0f); // A
+    glVertex3f(-0.8f, 8.5f, 0.0f); // C
+    glVertex3f(-0.5f, 16.0f, 1.0f); // CZ
+    glVertex3f(-0.8f, 8.5f, 1.0f); // AZ
+  glEnd();
+  glBegin(GL_POLYGON);
+    glColor3ub(109, 113, 117); // Embaixo do trapézio
+    glVertex3f(-0.3f, 7.5f, 0.0f); // E
+    glVertex3f(0.3f, 7.5f, 0.0f); // F
+    glVertex3f(0.3f, 7.5f, 1.0f); // FZ
+    glVertex3f(-0.3f, 7.5f, 1.0f); // EZ
   glEnd();
   glFlush();
 }
