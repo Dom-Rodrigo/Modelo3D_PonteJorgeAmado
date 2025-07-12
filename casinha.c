@@ -6,6 +6,57 @@ int largura=500, altura=500;
 void Casinha(void);
 float a[3]={4.0,4,4};
 
+void desenha_paralelepipedo(float Cx, float Cy, float Cz, float L, float h, int r, int g, int b){
+    float half_L = L/2;
+    glBegin(GL_POLYGON);
+
+    glColor3ub(r, g, b);
+    glVertex3f(Cx-half_L, Cy, Cz+(half_L)); // A
+    glVertex3f(Cx-half_L, Cy, Cz+(-half_L)); // B
+    glVertex3f(Cx+half_L, Cy, Cz+(-half_L)); // C
+    glVertex3f(Cx+half_L, Cy, Cz+(half_L)); // D
+    
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(r, g, b);
+    glVertex3f(Cx-half_L, Cy-h, Cz+(half_L)); // AZ
+    glVertex3f(Cx-half_L, Cy-h, Cz+(-half_L)); // BZ
+    glVertex3f(Cx+half_L, Cy-h, Cz+(-half_L)); // CZ
+    glVertex3f(Cx+half_L, Cy-h, Cz+(half_L)); // DZ
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(r, g, b);
+    glVertex3f(Cx-half_L, Cy, Cz+(half_L)); // A
+    glVertex3f(Cx-half_L, Cy, Cz+(-half_L)); // B
+    glVertex3f(Cx-half_L, Cy-h, Cz+(-half_L)); // BZ
+    glVertex3f(Cx-half_L, Cy-h, Cz+(half_L)); // AZ    
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(r, g, b);
+    glVertex3f(Cx+half_L, Cy, Cz+(half_L)); // D
+    glVertex3f(Cx+half_L, Cy, Cz+(-half_L)); // C
+    glVertex3f(Cx+half_L, Cy-h, Cz+(-half_L)); // CZ
+    glVertex3f(Cx+half_L, Cy-h, Cz+(half_L)); // DZ
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(r, g, b);
+    glVertex3f(Cx-half_L, Cy, Cz+(half_L)); // A
+    glVertex3f(Cx+half_L, Cy, Cz+(half_L)); // D
+    glVertex3f(Cx+half_L, Cy-h, Cz+(half_L)); // DZ
+    glVertex3f(Cx-half_L, Cy-h, Cz+(half_L)); // AZ
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(r, g, b);
+    glVertex3f(Cx-half_L, Cy, Cz+(-half_L)); // B
+    glVertex3f(Cx+half_L, Cy, Cz+(-half_L)); // C
+    glVertex3f(Cx+half_L, Cy-h, Cz+(-half_L)); // CZ
+    glVertex3f(Cx-half_L, Cy-h, Cz+(-half_L)); // BZ
+    glEnd();
+}
 void Casinha(void) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
    // glClear(GL_COLOR_BUFFER_BIT);
@@ -193,7 +244,7 @@ glBegin(GL_POLYGON);
     glVertex3f(-0.3f, 7.5f, 1.0f); // EZ
   glEnd();
   glBegin(GL_LINES);
-    glColor3ub(255, 255, 255); // Traço pi
+    glColor3ub(255, 255, 255); // Traço pista
     for (float i = -100; i < 100; i++){
         glVertex3f(0.0f, -(pow(i, 2)/1000), i);
     }
@@ -212,6 +263,11 @@ glBegin(GL_POLYGON);
         glVertex3f(0.0f, -(pow(i, 2)/1000), -32*(i/23));
     }
   glEnd();
+  desenha_paralelepipedo(3, -2, 0.5, 2, 0.5, 155, 155, 143);
+  desenha_paralelepipedo(-3, -2, 0.5, 2, 0.5, 155, 155, 143);
+  desenha_paralelepipedo(3, -2.5, 0.5, 3, 0.5, 104, 104, 97);
+  desenha_paralelepipedo(-3, -2.5, 0.5, 3, 0.5, 104, 104, 97);
+
   glFlush();
 }
 
