@@ -233,7 +233,7 @@ glBegin(GL_POLYGON);
   glEnd();
   glBegin(GL_LINES);
     glColor3ub(255, 255, 255); // Traço pi
-    for (float i = -100; i < 200; i++){
+    for (float i = -100; i < 100; i++){
         glVertex3f(0.0f, -(pow(i, 2)/1000), i);
     }
   glEnd();
