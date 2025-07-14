@@ -1,3 +1,9 @@
+/*
+ * Autor: Rodrigo Almeida Pirôpo
+ * Data: 14/07/2025
+ * Projeto: Modelo Gráfico 3D da Ponte Jorge Amado de Ilhéus
+ */
+
 #include <GL/glut.h>
 #include <stdlib.h>
 #include <math.h>
